@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-app.get('/', (req, res) => res.send(database.users))
+app.get('/', (req, res) => res.send('it works'))
 
 app.post('/signin', signin.handleSignIn(dbcall, bcrypt))
 app.post('/register', register.handleRegister(dbcall, bcrypt))
