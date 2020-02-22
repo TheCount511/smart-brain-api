@@ -11,7 +11,7 @@ const signin = require('./controllers/signin');
 const dbcall = knex({
     client: 'pg',
     connection: {
-        host: '127.0.0.1',
+        host: 'postgresql-concentric-75961',
         user: 'count',
         password: '1amHa!nt',
         database: 'smartbrain'
