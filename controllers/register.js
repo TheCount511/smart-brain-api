@@ -25,7 +25,7 @@ const handleRegister = (dbcall, bcrypt)=>(req, res)  => {
                         })
                 }).then(trx.commit).catch(trx.rollback);
         })
-        .catch(err => res.status(400).json('User already exists'))
+        .catch(err => res.status(400).json('User with that email already exists'))
 }
 
 
