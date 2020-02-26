@@ -10,6 +10,8 @@ app.models
 	 })
 	 .catch(err=>res.status(400).json('unable to work with API'))
 }
+
+
 const handleImage=(req, res, dbcall) => {
     const { id } = req.body;
     dbcall('users').where('id', '=', id)
