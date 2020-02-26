@@ -8,7 +8,7 @@ app.models
 .predict(Clarifai.FACE_DETECT_MODEL, req.body.input).then(data=>{
 	 	res.json(data);
 	 })
-	 .catch(err=>res.status(400).json('unable to work with API'))
+	 .catch(err=>res.status(400).json('invalid search'))
 }
 
 
@@ -19,7 +19,7 @@ const handleImage=(req, res, dbcall) => {
         .returning('entries')
         .then(entries => {
             res.json(entries[0]);
-        }).catch(err => res.status(400).json('unable to get entries'))
+        }).catch(err => res.status(400).json('face not detected'))
 }
 module.exports={
 	handleImage,
